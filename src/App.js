@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Header from "./components/Header"
+import Card from "./components/Card"
+import TodoContainer from "./components/TodoContainer"
+ function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-black p-16">
+    <div className="bg-[#EFEFEF] p-10 border rounded-md">
+      {/* Header */}
+        <Header></Header>
+        {/* Card */}
+      <div className="flex justify-between gap-7 my-5 flex-wrap">
+        <Card bgcolor={"#8272DA"} title={"23"} subtitle={"Chennai"}></Card>
+        <Card bgcolor={"#FD6663"} title={"December"} subtitle={"12:30 PM"}></Card>
+        <Card bgcolor={"#FCA201"} title={"Built Using"} subtitle={"React"}></Card>
+      </div>
+      {/* Todo Container */}
+       <TodoContainer></TodoContainer>
     </div>
-  );
+    </div>
+  )
 }
 
 export default App;
