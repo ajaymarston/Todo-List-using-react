@@ -3,12 +3,12 @@ import {useState} from 'react'
 import {useNavigate} from "react-router-dom"
 const Login=(props)=>{
     const navigate = useNavigate()
-const [eusername,setEusername]=useState()
-const [epassword,setEpassword]=useState()
+const [eusername,setEusername]=useState("")
+const [epassword,setEpassword]=useState("")
 const [rusers,setRusers]=useState(true)
 
 const users=props.users
-const setusers=props.setusers
+// const setusers=props.setusers
 
 
 function handleUInput(event){
@@ -54,7 +54,7 @@ function checkUser(){
                     placeholder="username" onChange={handleUInput}/> 
         
                      <input 
-                    type="text" 
+                    type="password" 
                     className="w-52 border-black p-1 bg-transparent border rounded-md"
                     placeholder="password" onChange={handlePInput}/> 
         
